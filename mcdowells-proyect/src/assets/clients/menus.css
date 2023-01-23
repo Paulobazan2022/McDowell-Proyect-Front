@@ -13,6 +13,8 @@
     width: 25%;
 }
 
+
+
 .centerContainerMenu {
     background-color: #BCEFFF;
     position: relative;
@@ -22,13 +24,22 @@
     height: 680px;
 }
 
+.centerMenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    width: 477px;
+    height: 415px;
+}
+
 .centerLeft {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    width: 55%;
+    width: 50%;
+
 
 }
 
@@ -37,14 +48,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    width: 142%;
+    width: 50%;
 
 }
 
 .mcJr {
-    width: 100px;
-    margin-top: 130px;
+    width: 115px;
+    height: 100px;
+    margin-top: 52px;
 }
 
 .mcJrBtn {
@@ -54,6 +65,9 @@
     width: 150px;
     margin-top: 10px;
     padding: 5px 10px 5px 10px;
+    background-color: #FBC9FF;
+    cursor: pointer;
+
 }
 
 .mcBtn {
@@ -63,11 +77,12 @@
     width: 150px;
     margin-top: 10px;
     padding: 5px 10px 5px 10px;
+    background-color: #FBC9FF;
+    cursor: pointer;
+
 }
 
 .mcBig {
-    margin-left: 16px;
-    margin-top: 80px;
     width: 150px;
 }
 
@@ -120,11 +135,13 @@
 
 .finishOrder {
     padding: 5px 10px 5px 10px;
-    margin-right: 50px;
-    margin-bottom: 10px;
+    margin-right: 55px;
+    margin-bottom: 20px;
     background-color: #D7FFFA;
     border: 2px solid #FBC9FF;
     border-radius: 35px;
+    cursor: pointer;
+
 }
 
 .total {
@@ -137,6 +154,7 @@
 }
 
 .resumen {
+    cursor: pointer;
     text-align: center;
     margin: 12px 0 0 35px;
     color: #5B00B7;

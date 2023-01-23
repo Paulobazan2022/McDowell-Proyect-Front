@@ -67,4 +67,5 @@
 .start{
     padding: 15px 30px 15px 30px;
     background-color: #FBC9FF;
+    cursor: pointer;
 }

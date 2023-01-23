@@ -1,10 +1,13 @@
 import '../../assets/clients/clientshome.css'
 import welcome from '../../assets/images/welcome.png'
 import mcTitle from '../../assets/images/title.png'
+import logo from '../../assets/images/logo.png'
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 
 function ClientsHome() {
+    const navigate = useNavigate();
     return (
         <>
             <div className="container">
@@ -14,9 +17,9 @@ function ClientsHome() {
                         <img src={welcome} alt=" NOT FOUND" />
                         <img className='mcTitle' src={mcTitle} alt='NOT FOUND' />
                     </div>
-                    <img className='logo' src='https://cdn-icons-png.flaticon.com/512/2794/2794569.png' alt='NOT FOUND' />
+                    <img className='logo' src={logo} alt='NOT FOUND' />
                     <div className='bottomDiv'>
-                        <button className='start'>EMPEZAR PEDIDO</button>
+                        <button className='start' onClick={() => navigate(`/menus`)}>EMPEZAR PEDIDO</button>
                     </div>
                 </div>
                 <div className='rigthContainer'>
