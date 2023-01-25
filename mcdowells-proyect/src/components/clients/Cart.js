@@ -47,7 +47,7 @@ function Cart() {
                                 <div className='precioTotMen'></div>
                             </div>
                         </div>
-                        <p className='total'> TOTAL: { } € </p>
+                        <p className='totalCart'> TOTAL: { } € </p>
                     </div>
                     <div className='bottomCart'>
                         <button className='resumeCart' onClick={ ()=>navigate(`/menus`)}>

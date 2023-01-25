@@ -49,9 +49,10 @@
 
 }
 
-.total {
+.totalCart {
     margin-top: 15px;
     font-size: 30px;
+    font-family: 'Century Gothic';
     font-weight: bold;
     color: #B900A6;
     -webkit-text-stroke: 1px #000000;
@@ -70,9 +71,11 @@
 .menuTitle {
     margin-top: 30px;
     font-size: 20px;
+    font-family: 'Century Gothic';
     font-weight: bold;
     color: #B900A6;
-    -webkit-text-stroke: 1px #000000;}
+    -webkit-text-stroke: 1px #000000;
+}
 
 .mas {
     width: 30px;
@@ -114,7 +117,7 @@
 }
 
 .mcJrCart {
-margin-top: 10px;
+    margin-top: 10px;
     width: 110px;
     height: 90px;
     margin-left: 30px;
@@ -148,6 +151,8 @@ margin-top: 10px;
 
 .resumeCart {
     padding: 13px 13px;
+    font-family: 'Century Gothic';
+    font-weight: bold;
     background-color: #D7FFFA;
     border: 5px solid #FBC9FF;
     border-radius: 40px;
@@ -156,6 +161,8 @@ margin-top: 10px;
 
 .finishCart {
     padding: 13px 13px;
+    font-family: 'Century Gothic';
+    font-weight: bold;
     background-color: #D7FFFA;
     border: 5px solid #FBC9FF;
     border-radius: 40px;

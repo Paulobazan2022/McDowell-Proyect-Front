@@ -66,6 +66,8 @@
 }
 .start{
     padding: 15px 30px 15px 30px;
+    font-family: 'Century Gothic';
+    font-weight: bold;
     background-color: #FBC9FF;
     cursor: pointer;
 }

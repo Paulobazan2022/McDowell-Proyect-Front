@@ -36,14 +36,10 @@ function Menus() {
                     </div>
                     <div className='bottomMenu'>
                         <div className='bottomLeft' >
-                            <p className='resumen' onClick={ ()=>navigate(`/Cart`)}>Ver resumen del pedido</p>
-                            <p className='total' >TOTAL: { }€</p>
+                            <p className='resumen' onClick={() => navigate(`/Cart`)}>Ver resumen del pedido</p>
                         </div>
                         <div className='bottomRight' >
-                            <button className='finishOrder'>
-                                FINALIZAR PEDIDO
-                            </button>
-
+                            <p className='total' >TOTAL: { }€</p>
                         </div>
                     </div>
                 </div>
