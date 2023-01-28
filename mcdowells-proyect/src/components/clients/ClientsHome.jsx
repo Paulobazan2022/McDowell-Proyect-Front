@@ -2,12 +2,13 @@ import '../../assets/clients/clientshome.css'
 import welcome from '../../assets/images/welcome.png'
 import mcTitle from '../../assets/images/title.png'
 import logo from '../../assets/images/logo.png'
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 
 function ClientsHome() {
     const navigate = useNavigate();
+   
     return (
         <>
             <div className="container">

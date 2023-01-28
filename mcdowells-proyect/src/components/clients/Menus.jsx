@@ -1,38 +1,50 @@
-import React from 'react';
+import React, { useState } from 'react';
 import mcTitle from '../../assets/images/title.png'
 import '../../assets/clients/menus.css'
 import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
+import axios from 'axios';
+
 
 
 function Menus() {
     const navigate = useNavigate();
+    const [menus, setMenus]  = useState([]);
+    const server = `http://localhost:3001/api/menus/all-menus`;
+
+    useEffect(() => {
+        const getMenus = async () => {
+            const response = await axios.get(server);
+            setMenus(response.data);
+            console.log(response.data);
+        }
+        getMenus();
+    }, [])
     return (
         <>
-            <div className="containerMenu">
+            <div className="containerMenus">
                 <div className='leftContainerMenu'></div>
                 <div className="centerContainerMenu">
                     <div className='topMenu'>
                         <img className='mcTitle' src={mcTitle} alt='NOT FOUND' />
                     </div>
                     <div className='centerMenu'>
-                        <div className='centerLeft'>
-                            <img className='mcJr' src='https://cdn-icons-png.flaticon.com/512/7451/7451012.png' alt='NOT FOUND' />
+                        {menus.map((menu) => 
+                            
+                            <div key={menu.id_product} className='menuContainer'>
+                            <img className='mcBig' src={menu.image} alt='NOT FOUND' />
                             {/*
                             Hay que tener en cuenta que hay que meter el id dinámico en ambos botones
                              */}
-                            <button className='mcJrBtn' onClick={() => navigate(`/details`)}>
-                                MENÚ McDOWELL'S JR
-                                4,25€
+                            <button className='mcBtn' onClick={() => navigate(`/menus/${menu.id_product}`)}>
+                                {menu.name}
+                                <br/>
+                                {menu.price}
                             </button>
-                        </div>
-                        <div className='centerRight'>
-                            <img className='mcBig' src='https://cdn-icons-png.flaticon.com/512/9425/9425772.png' alt='NOT FOUND' />
-                            <button className='mcBtn' onClick={() => navigate(`/details`)} >
-                                MENÚ McDOWELL'S
-                                8,50€
-                            </button>
+                            </div>
 
-                        </div>
+                        )}
+
                     </div>
                     <div className='bottomMenu'>
                         <div className='bottomLeft' >
