@@ -5,13 +5,13 @@ import Menus from './components/clients/Menus';
 import Cart from './components/clients/Cart';
 import ProductDetails from './components/clients/ProductDetails';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import CartProvider from './context/CartContext';
+import {AppCart} from './context/OrderContext';
+
 
 function App() {
   return (
-    <>
+    <><AppCart>
       <BrowserRouter>
-        <CartProvider>
           <Routes>
             <Route path='/' element={<ClientsHome />} />
             <Route path='/menus' element={<Menus />} />
@@ -22,8 +22,8 @@ function App() {
             <Route path='/menus/:id_product' element={<ProductDetails />} />
             <Route path='/cart' element={<Cart />} />
           </Routes>
-        </CartProvider>
       </BrowserRouter>
+      </AppCart>
     </>
   )
 }

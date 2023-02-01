@@ -1,21 +1,21 @@
 import { createContext, useContext, useState } from "react";
 
-export const AppContextOrder = createContext();
+export const AppContextCart = createContext();
 
 
-export function AppOrder({ children }) {
-    const [sharedOrder, setSharedOrder] = useState([]);
+export function AppCart({ children }) {
+    const [cart, setCart] = useState([]);
 
     const [totalPayment, setTotalPayment] = useState([{
-        totalPay : 0.00
+        totalPay: 0.00
     }]);
 
     return (
-        <AppContextOrder.Provider value={{ sharedOrder, setSharedOrder, totalPayment, setTotalPayment }}>
+        <AppContextCart.Provider value={{ cart, setCart, totalPayment, setTotalPayment }}>
             {children}
-        </AppContextOrder.Provider>
+        </AppContextCart.Provider>
     );
 }
 export function useAppContext() {
-    return useContext(AppContextOrder);
+    return useContext(AppContextCart);
 }

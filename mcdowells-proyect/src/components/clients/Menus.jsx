@@ -4,13 +4,15 @@ import '../../assets/clients/menus.css'
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import axios from 'axios';
-
+import { useAppContext } from '../../context/OrderContext'
 
 
 function Menus() {
+    const context = useAppContext()
+
     const navigate = useNavigate();
-    const [menus, setMenus]  = useState([]);
-    const server = `http://localhost:3001/api/menus/all-menus`;
+    const [menus, setMenus] = useState([]);
+    const server = `http://localhost:3001/api/products/all-products`;
 
     useEffect(() => {
         const getMenus = async () => {
@@ -29,18 +31,18 @@ function Menus() {
                         <img className='mcTitle' src={mcTitle} alt='NOT FOUND' />
                     </div>
                     <div className='centerMenu'>
-                        {menus.map((menu) => 
-                            
+                        {menus.map((menu) =>
+
                             <div key={menu.id_product} className='menuContainer'>
-                            <img className='mcBig' src={menu.image} alt='NOT FOUND' />
-                            {/*
+                                <img className='mcBig' src={menu.image} alt='NOT FOUND' />
+                                {/*
                             Hay que tener en cuenta que hay que meter el id dinámico en ambos botones
                              */}
-                            <button className='mcBtn' onClick={() => navigate(`/menus/${menu.id_product}`)}>
-                                {menu.name}
-                                <br/>
-                                {menu.price}
-                            </button>
+                                <button className='mcBtn' onClick={() => navigate(`/menus/${menu.id_product}`)}>
+                                    {menu.name}
+                                    <br />
+                                    {menu.price}
+                                </button>
                             </div>
 
                         )}
@@ -51,7 +53,7 @@ function Menus() {
                             <p className='resumen' onClick={() => navigate(`/Cart`)}>Ver resumen del pedido</p>
                         </div>
                         <div className='bottomRight' >
-                            <p className='total' >TOTAL: { }€</p>
+                            <p className='total' >TOTAL: {context.totalPayment[0].totalPay}€</p>
                         </div>
                     </div>
                 </div>

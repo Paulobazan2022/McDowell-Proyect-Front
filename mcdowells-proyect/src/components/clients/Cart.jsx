@@ -4,10 +4,12 @@ import pedido from '../../assets/images/resumen2.png'
 import '../../assets/clients/cart.css'
 import { useNavigate } from 'react-router-dom';
 //<img className='mcJr' src='https://cdn-icons-png.flaticon.com/512/1581/1581006.png' alt='NOT FOUND' />
-
+import { useAppContext } from '../../context/OrderContext'
 
 
 function Cart() {
+    const context = useAppContext()
+   
 
     const navigate = useNavigate();
 
