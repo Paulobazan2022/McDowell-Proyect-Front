@@ -92,6 +92,12 @@
 }
 
 .cantidad {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Century Gothic';
+    font-weight: bold;
+    color: #B900A6;
     width: 30px;
     height: 30px;
     margin-top: 12%;
@@ -99,16 +105,28 @@
 }
 
 .precioUd {
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Century Gothic';
+    font-weight: bold;
+    color: #B900A6;
     width: 90px;
     height: 30px;
     margin-top: 12%;
     margin-left: 15px;
+    text-align: center;
     background-color: #D9D9D9;
 
 }
 
 .precioTotMen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Century Gothic';
+    font-weight: bold;
+    color: #B900A6;
     width: 90px;
     height: 30px;
     margin-top: 12%;

@@ -29,7 +29,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 477px;
+    width: 500px;
     height: 415px;
 }
 
@@ -139,6 +139,19 @@
 
 }
 
+.vacio {
+    text-align: center;
+    font-family: 'Century Gothic';
+    color: #5B00B7;
+    -webkit-text-stroke: 0.5px #000000;
+    font-weight: bold;
+    font-size: 17px;
+    text-decoration: underline;
+    margin-left: 25px;
+
+}
+
+
 .resumen {
     cursor: pointer;
     text-align: center;
@@ -146,7 +159,9 @@
     color: #5B00B7;
     -webkit-text-stroke: 0.5px #000000;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 17px;
     text-decoration: underline;
+    margin-left: 35px;
+
 
 }

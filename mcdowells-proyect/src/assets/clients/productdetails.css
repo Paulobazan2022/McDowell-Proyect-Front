@@ -46,7 +46,7 @@
     color: #B900A6;
     -webkit-text-stroke: 1px #000000;
     text-align: center;
-    margin-top: 20px;
+    margin-top:10px;
 }
 .menuPrice {
     font-family: 'Century Gothic';
@@ -63,7 +63,7 @@
     justify-content: center;
     align-items: center;
     width: 477px;
-    height: 280px;
+    height: 250px;
 }
 
 .detailsMc {
