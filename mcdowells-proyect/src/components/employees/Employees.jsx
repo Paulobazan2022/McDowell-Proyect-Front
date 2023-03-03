@@ -2,7 +2,6 @@ import OrdersList from './OrdersList';
 import Navbar from "./Navbar";
 import '../../assets/employees/employees.css';
 import { useEffect, useState } from 'react';
-import axios from 'axios';
 import { useUserContext } from "../../context/User";
 import { useNavigate } from 'react-router-dom';
 import NewUser from './NewUser';
