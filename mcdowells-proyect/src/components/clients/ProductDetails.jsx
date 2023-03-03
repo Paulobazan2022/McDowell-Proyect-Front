@@ -18,11 +18,6 @@ function ProductDetails() {
 
 
     useEffect(() => {
-        /*const getProduct = async () => {
-            const response = await axios.get(`${process.env.REACT_APP_API_URL}/products/${id}`);
-            setProduct(response.data);
-        }
-        getProduct();*/
         ProductsManager.getSingleProduct(setProduct, id)
     }, [])
 

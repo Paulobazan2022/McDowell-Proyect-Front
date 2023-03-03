@@ -5,9 +5,6 @@ import '../../assets/clients/cart.css'
 import { useNavigate } from 'react-router-dom';
 import { useCartContext } from '../../context/ShoppingCartContext';
 
-
-
-
 function Cart() {
     const navigate = useNavigate();
     const context = useCartContext();

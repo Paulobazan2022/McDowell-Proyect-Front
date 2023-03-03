@@ -3,7 +3,6 @@ import mcTitle from '../../assets/images/title.png'
 import '../../assets/clients/menus.css'
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
-import axios from 'axios';
 import { useCartContext } from '../../context/ShoppingCartContext';
 import ProductsManager from '../../services/products.Api';
 
@@ -14,13 +13,7 @@ function Menus() {
     const context = useCartContext();
 
     useEffect(() => {
-       /* const getProducts = async () => {
-            const response = await axios.get(`${process.env.REACT_APP_API_URL}/products/all-products`);
-            setProducts(response.data);
-        }
-        getProducts(); */
         ProductsManager.getAllProducts(setProducts)
-
     }, [])
 
 

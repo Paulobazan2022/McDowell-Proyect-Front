@@ -4,9 +4,6 @@ import Modal from '../Modal';
 import { useNavigate } from 'react-router-dom';
 import { useUserContext } from '../../context/User';
 import UsersManager from '../../services/user.Api';
-import NewUser from './NewUser';
-
-
 
 const RegisterEmployees = () => {
     const navigate = useNavigate()

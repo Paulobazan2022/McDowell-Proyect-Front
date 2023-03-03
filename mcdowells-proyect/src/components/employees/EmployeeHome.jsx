@@ -52,7 +52,6 @@ function EmployeeHome() {
                             name="empPass" placeholder="password" onChange={(e) => setPassword(e.target.value)} required />
 
                         <input className='logInBtn' type="submit" value="LOG IN" />
-                        {/* <button className='logInBtn' onClick={() => LoginUser()}>LOG IN</button> */}
 
                     </form>
                 </div>
