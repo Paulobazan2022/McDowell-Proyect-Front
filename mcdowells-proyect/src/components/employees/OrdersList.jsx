@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import axios from 'axios';
 import OrdersCard from "./OrdersCard";
 import '../../assets/employees/ordersList.css';
 import OrdersManager from '../../services/order.Api';
@@ -8,16 +7,11 @@ const OrdersList = ({ statu, update, refresh }) => {
 
   const [ordersDetail, setOrdersDetail] = useState([]);
   const [filtered, setFiltered] = useState([]);
-  const [status, setStatus] = useState(statu.id_status); // nuevo estado
+  const [status, setStatus] = useState(statu.id_status); 
   const [updateList, setUpdateList] = useState(false)
 
   useEffect( () => {
     OrdersManager.getOrdersDetail(statu.id_status,setOrdersDetail)
-    /*const getOrdersDetail = async () => {
-      const response = await axios.get(`${process.env.REACT_APP_API_URL}/orders/ordersDetail/${statu.id_status}`);
-      setOrdersDetail(response.data);
-    }
-    getOrdersDetail(); */
     getNewOrdersList()
   }, [status, refresh])
 

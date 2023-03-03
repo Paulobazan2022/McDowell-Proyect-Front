@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import '../../assets/employees/orderCard.css';
-import axios from 'axios'
 import { useUserContext } from '../../context/User';
 import OrdersManager from '../../services/order.Api';
 
@@ -15,14 +14,7 @@ const OrdersCard = ({ ordersDetail, filtered, update }) => {
   const nextStatus = async (one) => {
 
     const token = contexUser.user.token
-    /*const authAxios = axios.create({
-      headers: {
-        authorization: token
-      }
-    })*/
-
     if (status !== 5) {
-      //await authAxios.patch(`${process.env.REACT_APP_API_URL}/orders/status/${one}`)
       OrdersManager.patchOrderDetails(token, one)
       update()
     }
